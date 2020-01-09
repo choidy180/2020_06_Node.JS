@@ -1,0 +1,21 @@
+let result = 0;
+
+console.log('duration_sum');
+
+for (let i =1; i <= 1000; i++){
+    result += i;
+}
+console.timeEnd('duration_sum');
+console.log('1부터 1000까지 더한 결과물 : %d' , result);
+console.log('현재 실행한 파일의 이름 : %s', __filename);
+console.log('현재 실행한 파일의 패스 : %s', __dirname);
+
+let person = {name: "아이유", age: 25};
+console.log(person);
+
+console.log(process.argv);
+console.log(process.argv.length);
+
+process.argv.array.forEach(function(item, index){
+    console.log(index + ' : ', item);
+});
