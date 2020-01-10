@@ -93,3 +93,21 @@ exit - 프로세스를 끝내는 메소드
 
 npm의 역할 - Nodepakage Manager의 약자
             노드의 패키지를 사용할 수 있도록 설치 및 삭제등을 
+            
+모듈 - 외부의 영향을 받지 않는 독립된, 재사용 가능한 코드들의 묶음,
+       모듈로 API를 묶어줌에 변수나 함수들의 name space를 보장해주고 모듈화를 통한 기능적 코딩이 가능해짐
+       
+require() - 외부 모듈을 가져올수 있는 메소드, 파라미터로 추가할 모듈의 파일 경로값을 받음
+
+module.exports - node가 만들어낸 property인데 빈 object가 대입되어 있다
+                 메서드를 대입하게 되면 function object가 빈 object를 덮어쓰게 된다
+              
+module과 require 생성
+
+require 메서드가 작동하는 원리 이해전 먼저 require와 module이 어떻게 생성되는지 살펴보면
+터미널 커맨드에 node를 실행시키고 this를 입력해보면 NodeJS가 local object에 module property를 생성하여 Module object를 대입하고
+require method를 추가하였음이 확인 가능하다
+
+NodeJS는 각각의 모듈마다 module property와 require mothod를 만들어 준다. 모듈끼리 소통하기 위해서 이들을 활용하게 된다
+이 medule과 require는 global object에 붙은 하나의 static property가 아니다. 이들은 local object로서 각 모듈마다 하나씩 가진
+API이다.
