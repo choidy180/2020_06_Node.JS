@@ -111,3 +111,10 @@ require method를 추가하였음이 확인 가능하다
 NodeJS는 각각의 모듈마다 module property와 require mothod를 만들어 준다. 모듈끼리 소통하기 위해서 이들을 활용하게 된다
 이 medule과 require는 global object에 붙은 하나의 static property가 아니다. 이들은 local object로서 각 모듈마다 하나씩 가진
 API이다.
+
+여러 모듈을 한번에 가져오는 방법
+
+1)index.js  - require 메서드가 특별히 인식하는 파일로서 여러 모듈을 가져온다
+2)폴더에 모듈 추가 - greet폴더 안에 모듈 파일들을 추가해줍니다. module.exports = (~)
+3)index.js에서 require 하기
+4)app.js에서 requir 하기
